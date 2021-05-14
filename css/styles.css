@@ -1,8 +1,15 @@
 * {
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+}
+
+:root {
+    color: white;
+    margin: 0 auto;
 }
 
 a {
@@ -70,7 +77,9 @@ header {
 }
 
 input {
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
     border-color: black;
+    border-radius: 15.3407px;
     border-width: 0.5mm;
     display: block;
     font-family: Karla;
@@ -79,6 +88,16 @@ input {
     margin: 20px 0px;
     padding: 0px 15px;
     width: 100%;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.10);
+    color: white;
+    background: #001D2D;
+}
+
+main {
+    width: auto;
 }
 
 p {
@@ -91,6 +110,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 select {
@@ -100,6 +120,18 @@ select {
     font-family: Karla;
     height: 40px;
     width: 460px;
+}
+
+textarea {
+    padding: 10px
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: #d2fcff;
+    border: 1.53407px solid #AFF9FE;
+    outline: none;
 }
 
 .anuncio {
@@ -112,10 +144,36 @@ select {
     z-index: 2;
 }
 
-.botones {
-    display: flex;
-    justify-content: space-between;
+.archivo {
+    border: 1.53407px solid rgba(0, 0, 0, 0.0);
+}
 
+.botones {
+    background-color: #00669F;
+    border-radius: 50%;
+    bottom: 50%;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 30px;
+    height: 40px;
+    justify-content: space-between;
+    margin: 0px;
+    right: 50px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    width: 40px;
+    z-index: 999;
+} 
+.botones:hover {
+    background-color: #001D2D;
+}
+
+.campo {
+    width: 99%;
+    margin: 10px;
 }
 
 .card {
@@ -171,9 +229,24 @@ select {
 }
 
 .cuenta {
+    color: #00669F;
     font-weight: lighter;
     margin-top: 10%;
     text-align: center;
+}
+
+.descripcion {
+    border: 1.53407px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15.3407px;
+    box-sizing: border-box;
+    margin-top: 10%;
+    padding: 10px;
+}
+
+.etiqueta {
+    display: block;
+    left: 0;
+    width: unset;
 }
 
 .fondo-batman {
@@ -190,7 +263,26 @@ select {
 
 .footer-texto {
     color: white;
+    font-size: 14px;
     text-align: center;
+}
+
+.form {
+    background-color: #00669F;
+    border-radius: 49.0901px;
+    box-sizing: border-box;
+    height: 80%;
+    margin: 1% auto 1%;
+    padding: 3% 3%;
+    position: relative;
+    width: 60%;
+}
+
+.form-campos {
+    align-items: flex-start;
+    display: inline-grid;
+    margin: 2%;
+    width: 45%;
 }
 
 .icono-mas {
@@ -254,6 +346,10 @@ select {
     background-color: #5f686d;
 }
 
+.requerido::before {
+    content: "*"
+}
+
 .registro {
     position: relative;
     width: 645;
@@ -265,12 +361,31 @@ select {
     top: 100px;
 }
 
+.submit {
+    background-color: #1CD1B0;
+    border: 0px;
+    font-family: Inter;
+    font-size: 20px;
+    margin: 1% 25% auto;
+    padding: 15px;
+    transition: 0.5s;
+    width: 50%;
+}
+
 .supermercado {
     position: absolute;
     width: 80px;
     height: 60px;
     bottom: 5px;
     padding-left: 10px;
+}
+
+#nombre:invalid {
+    border: 1.53407px solid #ff0000;
+}
+
+#nombre:valid {
+    border: 1.53407px solid #09ff00;
 }
 
 #reset {
@@ -307,13 +422,57 @@ select {
         position: relative;
     }
 
+    hr {
+        width: 100%;
+        margin: 5%;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    select {
+        width: 40%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .etiqueta {
+        display: block;
+        padding-left: 25%;
+    }
+
+    .form-campos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .habilidades {
+        width: 100%;
+        justify-content: center
+    }
+
+    .submit {
+        margin-top: 5%;
+    }
+
+    #date {
+        width: 100%;
+    }
+
+    #nombre {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width:480px) {
-
-    form {
-        width: 100vw;
-    }
 
     h1 {
         padding: 10px 0 0 80px;
@@ -321,5 +480,9 @@ select {
 
     h2 {
         padding-left: 5%;
+    }
+
+    .form {
+        width: 100vw;
     }
 }
