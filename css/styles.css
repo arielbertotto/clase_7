@@ -40,7 +40,6 @@ h1 {
     top: 20%;
 }
 
-
 h2 {
     color: black;
     font-family: Inter;
@@ -69,7 +68,6 @@ header {
     top: 0px;
     z-index: 1;
 }
-
 
 input {
     border-color: black;
@@ -160,7 +158,6 @@ select {
     top: -120px;
     width: 200px;
 }
-
 
 .contacto {
     display: flex;
@@ -257,7 +254,6 @@ select {
     background-color: #5f686d;
 }
 
-
 .registro {
     position: relative;
     width: 645;
@@ -276,7 +272,6 @@ select {
     bottom: 5px;
     padding-left: 10px;
 }
-
 
 #reset {
     background-color: #888888;
@@ -306,7 +301,6 @@ select {
     text-decoration: none;
     width: 40%;
 }
-
 
 @media screen and (max-width:768px) {
     footer {
